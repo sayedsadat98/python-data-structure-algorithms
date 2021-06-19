@@ -1,6 +1,6 @@
 class Node:
 
-    def __init__(self, value) -> None:
+    def __init__(self, value=None) -> None:
         self.value = value
         self.next = None
 
@@ -38,11 +38,11 @@ class SinglyLinkedList:
         Used to insert values into linked list
         :param position: Index (i.e. take 0 into consideration) where you want to insert the new value
         :param value: The data/value that you want to insert
-        :return: String if there is an error
+        :return: String if there user enters a negative index
         """
         newNode = Node(value)
 
-        if self.head is None:  # If the Singlelist1 was empty from the begininng
+        if self.head is None:  # If the List was empty from the beginning
             self.head = newNode
             self.tail = newNode
 
@@ -63,8 +63,8 @@ class SinglyLinkedList:
                     index += 1
                 newNode.next = tempNode.next
                 tempNode.next = newNode
-            else:
-                print('Location is not valid')
+            else:  # To handle negative indices
+                return 'You have entered an invalid index'
 
     def deleteNode(self, position):
         """
@@ -105,7 +105,7 @@ class SinglyLinkedList:
             else:
                 print('Illegal index')
 
-    def deleteEntireList(self):
+    def deleteList(self):
         """
         Deletes the entire List
         :return: String if there is an error
@@ -135,26 +135,20 @@ class SinglyLinkedList:
 
     def search(self, data):
         """
-        Searches the list for a specific value
+        Search the list for a specific value
         :param data: (int) The value that you are trying to search
         :return: String specifying if the value is found or not
         """
-        pointer = self.head
-        flag = False
-        while pointer is not None:
-
-            if pointer.value == data:
-                flag = True
-                break
-            else:
-                flag = False
-            pointer = pointer.next
-
-        if flag:
-            print(str(pointer.value) + ' Found!!')
-
+        if self.head is None:
+            return 'List is empty'
         else:
-            print(str(data) + ' Not Found!!')
+            tempNode = self.head
+
+            while tempNode:
+                if tempNode.value == data:
+                    return str(data) + ' found!!'
+                tempNode = tempNode.next
+            return str(data) + ' Not found'
 
 
 # Example of a driver code ; You can use your own driver code
@@ -171,7 +165,7 @@ if __name__ == '__main__':
 
     # print([nodes.value for nodes in SingleList])
     print(SingleList.traverseList())
-    # SingleList.search(4)
+    # print(SingleList.search(90))
 
     SingleList.deleteNode(2)
 
