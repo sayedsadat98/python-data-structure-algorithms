@@ -21,7 +21,7 @@ class CircularLinkedList:
 
     def length(self):
         """
-        Returns the length of the Linked List
+        Returns the length of the LinkedList
 
         :return: count (int) : Length of the list
         """

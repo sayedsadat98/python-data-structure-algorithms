@@ -1,13 +1,14 @@
 class Stack:
 
-    def __init__(self, sizeLimit=1000):  # sizeLimit is a default (large) value ; if a size is passed it will take that value
+    def __init__(self,
+                 sizeLimit=1000):  # sizeLimit is a default (large) value ; if a size is passed it will take that value
         self.size = sizeLimit
         self.list = []
 
     def __str__(self):
         self.list.reverse()
         values = [str(x) for x in self.list]
-        return '\n'.join(values)
+        return ' '.join(values)
 
     def isEmpty(self):
         return len(self.list) == 0
@@ -44,12 +45,12 @@ customStack.push(6)
 customStack.push(7)
 customStack.push(8)
 customStack.push(77)
-# # print(customStack.pop())
-# # print(customStack)
-# # print(customStack.peek())
-# # print('==============')
-# # print(customStack.pop())
-# # print(customStack.peek())
-# # print('==============')
+print(customStack.pop())
+# print(customStack)
+print(customStack.peek())
+# print('==============')
+# print(customStack.pop())
+# print(customStack.peek())
+# print('==============')
 # customStack.deleteStack()
 print(customStack)
