@@ -81,9 +81,11 @@ All Codes are in pure Python and PyCharm IDE is used.
 
 ### Data Structures
 * [Arrays](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/Arrays)
+* [Binary Trees](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/BinaryTrees)
 * [Linked List](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/Linked%20List)
 * [Recursion](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/Recursion)
 * [Stack](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/Stack)
+* [Queue](https://github.com/sayedsadat98/python-data-structure-algorithms/tree/main/Queue)
 
 <!-- GETTING STARTED -->
 ## Getting Started
